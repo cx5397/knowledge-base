@@ -20,7 +20,7 @@ export default {
   tip: {
     ExportError: 'Export Failed',
     professionalMessage:
-      'The Community Edition supports up to 5 APP. If you need more APP, please upgrade to the Professional Edition.',
+      'The Community Edition supports up to 100000000 APP. If you need more APP, please upgrade to the Professional Edition.',
     saveErrorMessage: 'Saving failed, please check your input or try again later',
     loadingErrorMessage: 'Failed to load configuration, please check your input or try again later'
   },

@@ -16,7 +16,7 @@ export default {
   },
   tip: {
     professionalMessage:
-      'The community edition supports up to 50 knowledge. For more knowledge, please upgrade to the professional edition.',
+      'The community edition supports up to 100000000 knowledge. For more knowledge, please upgrade to the professional edition.',
     syncSuccess: 'Sync task sent successfully',
     updateModeMessage:
       'After modifying the knowledge vector model, you need to vectorize the knowledge. Do you want to continue saving?'

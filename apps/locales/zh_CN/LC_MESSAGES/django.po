@@ -2306,7 +2306,7 @@ msgstr "icon 图标"
 #: community/apps/application/serializers/application_serializers.py:722
 #: community/apps/setting/serializers/valid_serializers.py:29
 msgid ""
-"The community version supports up to 5 applications. If you need more "
+"The community version supports up to 100000000 applications. If you need more "
 "applications, please contact us (https://fit2cloud.com/)."
 msgstr ""
 "社区版最多支持 5 个应用，如需拥有更多应用，请联系我们（https://"
@@ -4046,7 +4046,7 @@ msgstr "web站点url"
 #: community/apps/dataset/serializers/dataset_serializers.py:414
 #: community/apps/setting/serializers/valid_serializers.py:26
 msgid ""
-"The community version supports up to 50 knowledge bases. If you need more "
+"The community version supports up to 100000000 knowledge bases. If you need more "
 "knowledge bases, please contact us (https://fit2cloud.com/)."
 msgstr ""
 "社区版最多支持 50 个知识库，如需拥有更多知识库，请联系我们（https://"
@@ -7082,7 +7082,7 @@ msgstr "不支持移除团队管理员"
 #: community/apps/users/serializers/user_serializers.py:190
 #: community/apps/users/serializers/user_serializers.py:777
 msgid ""
-"The community version supports up to 2 users. If you need more users, please "
+"The community version supports up 100000000 users. If you need more users, please "
 "contact us (https://fit2cloud.com/)."
 msgstr ""
 "社区版最多支持 2 个用户，如需拥有更多用户，请联系我们（https://"
