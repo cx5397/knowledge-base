@@ -1,6 +1,6 @@
 <template>
   <login-layout>
-    <LoginContainer :subTitle="$t('views.system.theme.defaultSlogan')">
+    <LoginContainer subTitle="">
       <h2 class="mb-24">{{ $t('views.login.userRegister') }}</h2>
       <el-form class="register-form" :model="registerForm" :rules="rules" ref="registerFormRef">
         <div class="mb-24">

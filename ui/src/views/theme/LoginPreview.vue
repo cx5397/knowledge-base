@@ -11,7 +11,7 @@
       </div>
     </div>
     <login-layout style="height: 530px" :lang="false">
-      <LoginContainer :subTitle="data.slogan" class="login-container">
+      <LoginContainer subTitle="" class="login-container">
         <div class="mask"></div>
         <h2 class="mb-24">{{ $t('views.login.title') }}</h2>
         <el-form class="login-form">

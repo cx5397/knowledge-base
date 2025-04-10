@@ -2,11 +2,11 @@
   <div class="login-warp flex-center">
     <div class="login-container w-full h-full">
       <el-row class="container w-full h-full">
-        <el-col :xs="0" :sm="0" :md="10" :lg="10" :xl="10" class="left-container">
+        <!-- <el-col :xs="0" :sm="0" :md="10" :lg="10" :xl="10" class="left-container">
           <div class="login-image" :style="{ backgroundImage: `url(${loginImage})` }"></div>
-        </el-col>
-        <el-col :xs="24" :sm="24" :md="14" :lg="14" :xl="14" class="right-container flex-center">
-          <el-dropdown trigger="click" type="primary" class="lang" v-if="lang">
+        </el-col> -->
+        <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="right-container flex-center">
+          <!-- <el-dropdown trigger="click" type="primary" class="lang" v-if="lang">
             <template #dropdown>
               <el-dropdown-menu style="width: 180px">
                 <el-dropdown-item
@@ -32,7 +32,7 @@
             <el-button>
               {{ currentLanguage }}<el-icon class="el-icon--right"><arrow-down /></el-icon>
             </el-button>
-          </el-dropdown>
+          </el-dropdown> -->
           <slot></slot>
         </el-col>
       </el-row>
@@ -40,11 +40,11 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed } from 'vue'
-import { getThemeImg } from '@/utils/theme'
-import useStore from '@/stores'
-import { useLocalStorage } from '@vueuse/core'
-import { langList, localeConfigKey, getBrowserLang } from '@/locales/index'
+// import { computed } from 'vue'
+// import { getThemeImg } from '@/utils/theme'
+// import useStore from '@/stores'
+// import { useLocalStorage } from '@vueuse/core'
+// import { langList, localeConfigKey, getBrowserLang } from '@/locales/index'
 defineProps({
   lang: {
     type: Boolean,
@@ -52,37 +52,37 @@ defineProps({
   }
 })
 defineOptions({ name: 'LoginLayout' })
-const { user } = useStore()
+// const { user } = useStore()
 
-const changeLang = (lang: string) => {
-  useLocalStorage(localeConfigKey, getBrowserLang()).value = lang
-  window.location.reload()
-}
+// const changeLang = (lang: string) => {
+//   useLocalStorage(localeConfigKey, getBrowserLang()).value = lang
+//   window.location.reload()
+// }
 
-const currentLanguage = computed(() => {
-  return langList.value?.filter((v: any) => v.value === user.getLanguage())?.[0]?.label
-})
+// const currentLanguage = computed(() => {
+//   return langList.value?.filter((v: any) => v.value === user.getLanguage())?.[0]?.label
+// })
 
-const fileURL = computed(() => {
-  if (user.themeInfo?.loginImage) {
-    if (typeof user.themeInfo?.loginImage === 'string') {
-      return user.themeInfo?.loginImage
-    } else {
-      return URL.createObjectURL(user.themeInfo?.loginImage)
-    }
-  } else {
-    return ''
-  }
-})
+// const fileURL = computed(() => {
+//   if (user.themeInfo?.loginImage) {
+//     if (typeof user.themeInfo?.loginImage === 'string') {
+//       return user.themeInfo?.loginImage
+//     } else {
+//       return URL.createObjectURL(user.themeInfo?.loginImage)
+//     }
+//   } else {
+//     return ''
+//   }
+// })
 
-const loginImage = computed(() => {
-  if (user.themeInfo?.loginImage) {
-    return `${fileURL.value}`
-  } else {
-    return new URL(`../../assets/theme/${getThemeImg(user.themeInfo?.theme)}.jpg`, import.meta.url)
-      .href
-  }
-})
+// const loginImage = computed(() => {
+//   if (user.themeInfo?.loginImage) {
+//     return `${fileURL.value}`
+//   } else {
+//     return new URL(`../../assets/theme/${getThemeImg(user.themeInfo?.theme)}.jpg`, import.meta.url)
+//       .href
+//   }
+// })
 </script>
 <style lang="scss" scoped>
 .login-warp {

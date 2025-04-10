@@ -12,6 +12,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@antv/layout": "^0.3.1",
     "@codemirror/theme-one-dark": "^6.1.2",

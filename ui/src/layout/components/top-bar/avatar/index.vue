@@ -23,12 +23,12 @@
         <el-dropdown-item class="border-t p-8" @click="openResetPassword">
           {{ $t('views.login.resetPassword') }}
         </el-dropdown-item>
-        <div v-hasPermission="new ComplexPermission([], ['x-pack'], 'OR')">
+        <!-- <div v-hasPermission="new ComplexPermission([], ['x-pack'], 'OR')">
           <el-dropdown-item class="border-t p-8" @click="openAPIKeyDialog">
             {{ $t('layout.apiKey') }}
           </el-dropdown-item>
-        </div>
-        <el-dropdown-item class="border-t" style="padding: 0" @click.stop>
+        </div> -->
+        <!-- <el-dropdown-item class="border-t" style="padding: 0" @click.stop>
           <el-dropdown class="w-full" trigger="hover" placement="left-start">
             <div class="flex-between w-full" style="line-height: 22px; padding: 12px 11px">
               <span> {{ $t('layout.language') }}</span>
@@ -61,7 +61,7 @@
         </el-dropdown-item>
         <el-dropdown-item class="border-t" @click="openAbout">
           {{ $t('layout.about.title') }}
-        </el-dropdown-item>
+        </el-dropdown-item> -->
 
         <el-dropdown-item class="border-t" @click="logout">
           {{ $t('layout.logout') }}
@@ -82,9 +82,9 @@ import ResetPassword from './ResetPassword.vue'
 import AboutDialog from './AboutDialog.vue'
 import UserPwdDialog from '@/views/user-manage/component/UserPwdDialog.vue'
 import APIKeyDialog from './APIKeyDialog.vue'
-import { ComplexPermission } from '@/utils/permission/type'
-import { langList } from '@/locales/index'
-import { useLocale } from '@/locales/useLocale'
+// import { ComplexPermission } from '@/utils/permission/type'
+// import { langList } from '@/locales/index'
+// import { useLocale } from '@/locales/useLocale'
 const { user } = useStore()
 const router = useRouter()
 
@@ -94,17 +94,17 @@ const APIKeyDialogRef = ref()
 const resetPasswordRef = ref<InstanceType<typeof ResetPassword>>()
 
 // const { changeLocale } = useLocale()
-const changeLang = (lang: string) => {
-  user.postUserLanguage(lang)
-  // changeLocale(lang)
-}
-const openAbout = () => {
-  AboutDialogRef.value?.open()
-}
+// const changeLang = (lang: string) => {
+//   user.postUserLanguage(lang)
+//   // changeLocale(lang)
+// }
+// const openAbout = () => {
+//   AboutDialogRef.value?.open()
+// }
 
-function openAPIKeyDialog() {
-  APIKeyDialogRef.value.open()
-}
+// function openAPIKeyDialog() {
+//   APIKeyDialogRef.value.open()
+// }
 
 const openResetPassword = () => {
   resetPasswordRef.value?.open()
